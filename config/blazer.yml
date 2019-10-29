@@ -31,6 +31,8 @@ data_sources:
       user_id: "https://fondery-bi.herokuapp.com/insights/queries/7-events?user_id={value}"
 
     smart_columns:
+      user_id: "SELECT id, email_address FROM users WHERE id IN {value}"
+      email_address: "SELECT email_address, id FROM users WHERE email_address IN {value}"
       recipe_id: "SELECT id, title FROM recipes WHERE id IN {value}"
 
 # create audits
